@@ -1,0 +1,19 @@
+{
+  "name": "assg2",
+  "version": "1.0.0",
+  "description": "twitter assg",
+  "main": "server.js",
+  "scripts": {
+    "start": "npx nodemon server.js"
+  },
+  "author": "Sheetal N",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "config": "^3.2.2",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.3",
+    "pug": "^2.0.4",
+    "twit": "^2.2.11"
+  }
+}

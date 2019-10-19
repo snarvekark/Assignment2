@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title #{title}
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css')
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+  body
+    main
+      block header.jumbotron
+        header.header
+          div.jumbotron
+            h1.text-center #{title}
+              p.text-center View, Post and Follow Tweets Here! !
+      block content

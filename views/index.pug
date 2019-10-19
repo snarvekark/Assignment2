@@ -1,0 +1,16 @@
+extends default
+
+block content	
+  div.container
+    h2= "Login using Twitter"
+    form(action="/new_user" method="POST")
+      input(type="text" name="username" placeholder="UserName")
+      input(type="text" name="passwd" placeholder="Password")
+      input(type="submit" label="Submit") 
+    each record in tweet
+      div.col-md-4
+        h2.panel-title
+          | #{record.created_at} #{record.text}
+        
+       
+
