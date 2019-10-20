@@ -5,11 +5,11 @@ var config = require('./config');
 var T = new Twit(config);
 const userName = '';
 app.post('/form', (req, res) => {
-  name = req.body.userId
+  userName = req.body.userId
 })
 var params = {
 
-q: name,
+q: userName,
 
 count: 10
 
@@ -22,14 +22,14 @@ function searchedData(err, data, response) {
 	output = data;
 }
 
-/*app.set('view engine', 'pug');
+app.set('view engine', 'pug');
 app.use(express.static(__dirname + '/public'));
 app.get('/', (req, res) => {
   res.render('index', {
   title: 'Tweets',
   tweet: output.statuses
 });
-});*/
+});
 const server = app.listen(3000, () => {
   console.log(output);
 });

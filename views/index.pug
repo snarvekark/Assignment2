@@ -2,15 +2,22 @@ extends default
 
 block content	
   div.container
-    h2= "Login using Twitter"
-    form(action="/new_user" method="POST")
-      input(type="text" name="username" placeholder="UserName")
-      input(type="text" name="passwd" placeholder="Password")
-      input(type="submit" label="Submit") 
-    each record in tweet
       div.col-md-4
-        h2.panel-title
-          | #{record.created_at} #{record.text}
-        
-       
+        table(style='width:100%', border='0')
+          tr
+            th TimeStamp
+            th Tweet
+          each record in tweet
+            tr
+              td #{record.created_at}
+              td #{record.text}
+        table(style='width:100%', border='0')
+          tr      
+            td
+              <button class="btn btn-info btn-sm" type="button" style='margin-left: 10px; margin-top: 20px;'>Create New Tweet</button>
+            td  
+              <button class="btn btn-info btn-sm" type="button" style='margin-left: 10px; margin-top: 20px;'>Update Tweet</button>
+            td
+              <button class="btn btn-info btn-sm" type="button" style='margin-left: 10px; margin-top: 20px;'>Delete Tweet</button>
 
+        

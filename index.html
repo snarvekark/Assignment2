@@ -1,4 +1,5 @@
  <!DOCTYPE html>
+ <!-- Author : Sheetal N -->
 <html lang="en">
 <head>
   <title>Twitter Assignment</title>
@@ -18,14 +19,19 @@
   <h1>Twitter API</h1>
   <p>View, Post, Follow Your Tweets Here!</p> 
 </div>
- <div id="root">
-  <div class="container">
-    <form action="/post_tweet" method="post">
-        Name: <input name="uName" type="text" /> <br />
-        User Name: <input name="userId" type="text" /> <br />
-        <input type="submit" value="Get Tweets"/>
-    </form>
-  </div>
+<div class="col-xs-12" style="height:50px;"></div>
+<div class="container">
+  <form action="/submit" method="post" class="form-inline">
+      <div class="form-group">
+        <label for="uName">Name:</label> 
+        <input name="uName" type="text" class="form-control"/>
+      </div>
+      <div class="form-group">
+        <label for="userId">User Name:</label>
+        <input name="userId" type="text" class="form-control"/> <br />
+      </div>
+      <input type="submit" value="Get Tweets" class="btn btn-default"/>
+  </form>
 </div>
 </body>
 </html> 
